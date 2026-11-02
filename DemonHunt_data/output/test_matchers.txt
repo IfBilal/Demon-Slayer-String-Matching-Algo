@@ -1,0 +1,24 @@
+PASS naive       aba in ababa 
+PASS rabin-karp  aba in ababa 
+PASS kmp         aba in ababa 
+PASS automaton   aba in ababa 
+PASS naive       ababaca in abababacaba 
+PASS rabin-karp  ababaca in abababacaba 
+PASS kmp         ababaca in abababacaba 
+PASS automaton   ababaca in abababacaba 
+PASS naive       aa in aaaaaa 
+PASS rabin-karp  aa in aaaaaa 
+PASS kmp         aa in aaaaaa 
+PASS automaton   aa in aaaaaa 
+PASS naive       abcab in acaabcaabcab 
+PASS rabin-karp  abcab in acaabcaabcab 
+PASS kmp         abcab in acaabcaabcab 
+PASS automaton   abcab in acaabcaabcab 
+PASS naive       d in abcabcabc 
+PASS rabin-karp  d in abcabcabc 
+PASS kmp         d in abcabcabc 
+PASS automaton   d in abcabcabc 
+PASS prefix function of ababaca 
+PASS rabin-karp shifts with d=10, q=11 
+PASS rabin-karp spurious hits with d=10, q=11 
+PASS kmp_resume across a chunk boundary 

@@ -1,0 +1,9 @@
+Times include preprocessing; RK uses d=256, q=101.
+Character comparisons; automaton reports table lookups instead.
+Automaton       100,000 operations  0.003875 s
+KMP             199,901 operations  0.009116 s
+Rabin-Karp            0 operations  0.009536 s
+Naive         9,990,100 operations  0.341771 s
+Automaton wins this run; FA scans with one table lookup per character.
+Naive loses: all 100 characters are compared at each of 99,901 shifts.
+KMP reuses prefixes; FA uses one lookup per character; RK rejects hashes without verification.

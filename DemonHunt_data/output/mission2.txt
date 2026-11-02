@@ -1,0 +1,27 @@
+Marker: GATTACAGATTC  Reverse complement: GAATCTGTAATC
+delta: state  A  C  G  T
+           0  0  0  1  0
+           1  2  0  1  0
+           2  0  0  1  3
+           3  0  0  1  4
+           4  5  0  1  0
+           5  0  6  1  0
+           6  7  0  1  0
+           7  0  0  8  0
+           8  9  0  1  0
+           9  0  0  1 10
+          10  0  0  1 11
+          11  5 12  1  0
+          12  0  0  1  0
+Shifts refer to the stored forward sequence for both strands.
+sample_01.txt: forward=0 []; reverse=0 []
+sample_02.txt: forward=0 []; reverse=0 []
+sample_03.txt: forward=0 []; reverse=0 []
+sample_04.txt: forward=0 []; reverse=0 []
+sample_05.txt: forward=0 []; reverse=0 []
+sample_06.txt: forward=0 []; reverse=0 []
+sample_07.txt: forward=0 []; reverse=3 [125858, 407774, 668245]
+sample_08.txt: forward=0 []; reverse=0 []
+sample_09.txt: forward=0 []; reverse=0 []
+sample_10.txt: forward=0 []; reverse=0 []
+Demon sample(s): sample_07.txt

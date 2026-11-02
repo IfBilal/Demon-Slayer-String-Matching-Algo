@@ -1,0 +1,107 @@
+DEMON SLAYER CORPS · THE STRING HUNT                                                                Assignment 3
+
+
+ASSIGNMENT 3
+
+Demon Slayer Corps — The String Hunt
+String matching in practice: Naïve · Rabin-Karp · KMP · Finite Automata
+
+  In memory of Akaza, Upper Moon Three. It is only fitting that Assignment 3 is his.
+                              Due: Sunday 8 November 2026, 11:59 PM
+
+Orders from headquarters
+Congratulations, you survived Final Selection and joined the Demon Slayer Corps. A demon is hiding
+among the villages, someone in the Corps is cheating, and the Hashira want to know which technique is
+fastest. Your sword this time is the string matching: naïve, Rabin-Karp, KMP and finite automata.
+Clear three missions and hand in a short mission report. All data files and the Python starter code are in
+DemonHunt_data.zip on the GCR. The starter code is in Python; if you prefer C++ or Java, port it yourself.
+
+Start here. The starter code already reads the files, times your runs and tests your work. Your job is to
+turn the lecture pseudocode into working code: fill the TODOs in starter/matchers.py, run python
+test_matchers.py until every line says PASS (your own Final Selection), then complete mission1.py to
+mission3.py.
+
+
+Corps rules
+   • Language: C++, Java or Python.
+   • No built-in substring search or regex inside any matcher. Using one in a matcher scores zero for
+     that matcher.
+   • Report each match as its shift s, exactly as in the lectures (0 ≤ s ≤ n − m). In Python this is simply the
+     index where the match starts, e.g. ababa with aba gives 0 and 2.
+   • Code is checked for similarity with other submissions and online sources. Copied code scores zero
+     for the whole assignment, as per course policy.
+   • A 10-minute viva may be held. Students who cannot explain their own code or trace their own π
+     and δ may have their marks scaled down.
+
+The three missions
+Mission 1 — The Crow’s Alarm (KMP) · 30 marks
+Every slayer’s Kasugai crow reports to headquarters, and all their messages are in crow_log.txt (about 5
+MB). When a crow spots a demon it screams KAKAKA. Headquarters needs to know how many alarms
+were raised.
+   • Report how many times KAKAKA appears and its first 10 shifts. Overlapping caws count: KAKAKAKA
+     holds 2.
+   • The catch: the message scroll is too long to open at once. Read it only in 4 KB chunks. A caw split
+     across two chunks must still be heard, so carry the KMP state q from one chunk into the next.
+   • Print the π array of KAKAKA as part of your output.
+
+Mission 2 — Tamayo’s Blood Lab (finite automaton) · 30 marks
+Tamayo has isolated a marker that only demon blood carries: GATTACAGATTC. The folder blood_samples/
+holds blood DNA from 10 villagers (about 1 million bases each). One of them is a demon in disguise.
+   • Build the δ table for the marker over Σ = {A, C, G, T} and print it.
+
+
+                                                    Page 1
+DEMON SLAYER CORPS · THE STRING HUNT                                                             Assignment 3
+
+
+   • Run the automaton on every sample and unmask the demon.
+   • The catch: DNA has two strands, and this demon is clever. The marker may sit on the reverse
+     strand only. Also search for the reverse complement (swap A↔T and C↔G, then reverse the
+     string). Report matches per strand for every sample.
+
+Mission 3 — The Copycat Slayer (Rabin-Karp) · 30 marks
+The Hashira asked five trainees, Tanjiro, Zenitsu, Inosuke, Kanao and Genya, to write about what they
+learned. Someone found hashira_manual.txt and copied from it. Their reports are in
+trainee_reports/. Find out who copied, and how much.
+
+   • Clean every text: lowercase, remove punctuation, single spaces.
+   • Hash every 40-character window of the manual into a hash map (hash → list of shifts), using d =
+     256 and q = 1,000,000,007. Roll the hash across each report; on a hit, verify character by character.
+   • For each trainee, print a similarity score = copied characters ÷ report length, as a percentage, and
+     rank all five.
+   • The catch: one trainee changed words while copying. In two lines, explain why your detector gives
+     them a lower score than they deserve.
+
+Bonus mission — Breathing Styles Tournament · +10 marks
+Optional, for those who want Hashira rank. Race all four techniques (naïve, Rabin-Karp, KMP, automaton)
+in one arena with mission4.py.
+   • Arena (Infinity Castle): T = a repeated 100,000 times, P = a repeated 99 times followed by b.
+   • Show the comparisons and time of all four in one bar chart, and explain the winner and the loser in
+     3 lines.
+
+What to submit
+Upload one zip named RollNo_DemonHunt.zip containing:
+   • src/: your completed starter folder.
+   • mission_report.pdf: 1–2 pages with a screenshot of each mission’s output and your two-line
+     answer from Mission 3. Add the bonus chart if you did it.
+
+Marks
+ Part                                                                                    Marks
+
+ Final Selection: test_matchers.py all PASS                                              10
+
+ Mission 1: The Crow’s Alarm                                                             30
+
+ Mission 2: Tamayo’s Blood Lab                                                           30
+
+ Mission 3: The Copycat Slayer                                                           30
+
+ Total                                                                                   100
+
+ Bonus: Breathing Styles Tournament                                                      +10
+
+
+
+
+                                                  Page 2
+

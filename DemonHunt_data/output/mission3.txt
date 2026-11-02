@@ -1,0 +1,7 @@
+1. Zenitsu   89.00%
+2. Kanao     31.86%
+3. Inosuke   14.96%
+4. Genya      0.00%
+5. Tanjiro    0.00%
+Changing words breaks exact 40-character windows, leaving fewer verified matches.
+The score measures verbatim coverage, so it underestimates paraphrased copying.
